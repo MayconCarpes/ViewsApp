@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">MeuAppDeLayouts</string> <string name="desc_imagem_cabecalho_blog">Imagem do cabeçalho do post</string>
+
+    <string name="app_name">MeuAppDeLayouts</string> <string name="titulo_toolbar_main">ConstraintLayout</string>
+    <string name="botao_blog_post">BLOG POST</string>
+    <string name="botao_serie">SÉRIE</string>
+    <string name="botao_concurso_textos">CONCURSO DE TEXTOS</string>
+
+
     <string name="titulo_blog_post">Utilizando Imagens no Android</string>
     <string name="autor_blog_post">Emerson Carvalho</string>
     <string name="data_blog_post">17/04/2029</string>
