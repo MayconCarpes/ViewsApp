@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".SerieActivity">
+
+    <View
+        android:id="@+id/topBarBackground"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#D211D5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textLogoNetflix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/logo_serie_netflix"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/topBarBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topBarBackground" />
+
+    <TextView
+        android:id="@+id/textSerieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/serie_titulo"
+        android:textColor="@android:color/black"
+        app:drawableBottomCompat="@drawable/ic_arrow_down_serie"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBarBackground" />
+
+    <TextView
+        android:id="@+id/textEpisodeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/desc_seta_para_baixo"
+        android:drawablePadding="4dp"
+        android:text="@string/serie_episodio_exemplo"
+        android:textColor="#BDBDBD"
+        android:textSize="14sp"
+        app:drawableTint="#BDBDBD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSerieTitle" />
+
+    <ImageView
+        android:id="@+id/imageSeriePoster"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/desc_poster_serie"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEpisodeInfo"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <SeekBar
+        android:id="@+id/seekBarProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:progress="30"
+        android:progressBackgroundTint="#555555"
+        android:progressTint="#E50914"
+        android:thumbTint="#E50914"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageSeriePoster" />
+
+    <TextView
+        android:id="@+id/textStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/serie_tempo_inicio"
+        android:textColor="#BDBDBD"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarProgress" app:layout_constraintStart_toStartOf="@+id/seekBarProgress" android:layout_marginTop="4dp" /> <TextView
+    android:id="@+id/textEndTime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/serie_tempo_fim"
+    android:textColor="#BDBDBD"
+    android:textSize="12sp"
+    app:layout_constraintTop_toBottomOf="@+id/seekBarProgress" app:layout_constraintEnd_toEndOf="@+id/seekBarProgress"     android:layout_marginTop="4dp" />
+
+
+
+    <ImageView
+        android:id="@+id/iconReplay"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/desc_icone_retroceder"
+        android:src="@drawable/voltar"
+        app:layout_constraintEnd_toStartOf="@+id/iconPlay"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarProgress" />
+
+    <ImageView
+        android:id="@+id/iconPlay"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/desc_icone_play"
+        android:src="@drawable/botao_play"
+        app:layout_constraintBottom_toBottomOf="@+id/iconReplay"
+        app:layout_constraintEnd_toStartOf="@+id/iconSettings"
+        app:layout_constraintStart_toEndOf="@+id/iconReplay"
+        app:layout_constraintTop_toTopOf="@+id/iconReplay" />
+
+    <ImageView
+        android:id="@+id/iconSettings"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/desc_icone_configuracoes"
+        android:src="@drawable/engrenagem"
+        app:layout_constraintBottom_toBottomOf="@+id/iconPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iconPlay"
+        app:layout_constraintTop_toTopOf="@+id/iconPlay" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
